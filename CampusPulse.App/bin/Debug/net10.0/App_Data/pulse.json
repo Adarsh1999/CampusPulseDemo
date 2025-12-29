@@ -1,0 +1,44 @@
+{
+  "sessions": [
+    {
+      "code": "MSA101",
+      "title": "Build Your First .NET API",
+      "speaker": "MSA Ambassador",
+      "startUtc": "2025-12-29T08:45:40.5357659+00:00",
+      "createdUtc": "2025-12-29T07:45:40.5357659+00:00"
+    },
+    {
+      "code": "AZURE1",
+      "title": "Azure in 15 Minutes",
+      "speaker": "Student Lead",
+      "startUtc": "2025-12-29T09:45:40.5357659+00:00",
+      "createdUtc": "2025-12-29T07:45:40.5357659+00:00"
+    }
+  ],
+  "feedbackEntries": [
+    {
+      "id": "9a25f648-7bcf-4885-bf1a-56915ffdd45e",
+      "sessionCode": "MSA101",
+      "rating": 5,
+      "comment": "Great pace and clear demos",
+      "sentimentScore": 2,
+      "createdUtc": "2025-12-29T07:17:40.5357659+00:00"
+    },
+    {
+      "id": "564a9bef-055e-4a5f-b5b5-c04b5e8f0090",
+      "sessionCode": "MSA101",
+      "rating": 4,
+      "comment": "Useful examples, slightly fast",
+      "sentimentScore": 2,
+      "createdUtc": "2025-12-29T07:33:40.5357659+00:00"
+    },
+    {
+      "id": "972cfa68-2a2b-4f00-bbb0-4f5b63a4155e",
+      "sessionCode": "AZURE1",
+      "rating": 5,
+      "comment": "Awesome intro to Azure services",
+      "sentimentScore": 1,
+      "createdUtc": "2025-12-29T07:27:40.5357659+00:00"
+    }
+  ]
+}

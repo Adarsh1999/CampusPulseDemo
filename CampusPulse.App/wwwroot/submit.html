@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Submit Feedback - CampusPulse</title>
+    <link rel="stylesheet" href="/css/site.css" />
+  </head>
+  <body>
+    <main>
+      <nav>
+        <div class="brand">
+          <span>CP</span>
+          <div>
+            <div>CampusPulse</div>
+            <div class="badge"><strong>Student View</strong> submit feedback</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="/index.html">Home</a>
+          <a href="/dashboard.html">Live Dashboard</a>
+          <a href="/admin.html">Create Session</a>
+        </div>
+      </nav>
+
+      <section class="section">
+        <div class="form-card">
+          <div class="pill">Quick Pulse</div>
+          <h2>Rate the session in 10 seconds</h2>
+          <p class="badge">Your feedback shows up live on the dashboard.</p>
+
+          <form id="feedbackForm">
+            <div class="form-row" style="margin-top: 18px;">
+              <div>
+                <label for="sessionCode">Session code</label>
+                <input id="sessionCode" name="sessionCode" placeholder="MSA101" required />
+              </div>
+              <div>
+                <label for="student">Your name (optional)</label>
+                <input id="student" name="student" placeholder="Aarav" />
+              </div>
+            </div>
+
+            <div style="margin-top: 18px;">
+              <label>Rating</label>
+              <div class="rating-grid" id="ratingGrid">
+                <button type="button" class="rating-button" data-rating="1">1</button>
+                <button type="button" class="rating-button" data-rating="2">2</button>
+                <button type="button" class="rating-button" data-rating="3">3</button>
+                <button type="button" class="rating-button" data-rating="4">4</button>
+                <button type="button" class="rating-button" data-rating="5">5</button>
+              </div>
+            </div>
+
+            <div style="margin-top: 18px;">
+              <label for="comment">What stood out?</label>
+              <textarea id="comment" name="comment" placeholder="Great pace and clear explanations."></textarea>
+            </div>
+
+            <div style="margin-top: 20px;">
+              <button class="btn btn-primary" type="submit">Send Feedback</button>
+            </div>
+            <div class="status" id="status"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/js/submit.js"></script>
+  </body>
+</html>
