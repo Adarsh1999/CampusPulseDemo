@@ -1,5 +1,7 @@
 # CampusPulse Demo (MSA Student Project)
 
+> **GitHub**: [https://github.com/Adarsh1999/CampusPulseDemo](https://github.com/Adarsh1999/CampusPulseDemo)
+
 CampusPulse is a lightweight, end-to-end **ASP.NET Core** demo that lets students submit quick feedback during a session while a live dashboard updates in real time. It is designed to fit a **30-minute teaching demo** and highlight core Microsoft technologies without extra dependencies.
 
 ## What you get
@@ -30,8 +32,11 @@ CampusPulseDemo/
 
 ## Quick start
 ```bash
-cd /home/adarsh/msa-project/CampusPulseDemo
+# Clone the repository
+git clone https://github.com/Adarsh1999/CampusPulseDemo.git
+cd CampusPulseDemo
 
+# Run the app
 dotnet run --project CampusPulse.App
 ```
 
