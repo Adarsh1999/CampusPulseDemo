@@ -336,6 +336,75 @@ textarea {
   background: rgba(255, 255, 255, 0.08);
 }
 
+/* Session Picker */
+.session-picker {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.session-picker-loading {
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 12px;
+}
+
+.session-picker-empty {
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.session-option {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(6, 12, 22, 0.6);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.session-option:hover {
+  border-color: rgba(45, 212, 191, 0.4);
+  background: rgba(45, 212, 191, 0.08);
+}
+
+.session-option.selected {
+  border-color: var(--accent-2);
+  background: linear-gradient(135deg, rgba(45, 212, 191, 0.15), rgba(255, 122, 89, 0.1));
+  box-shadow: 0 0 20px rgba(45, 212, 191, 0.2);
+}
+
+.session-option-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.session-option-code {
+  font-family: "DM Mono", ui-monospace, monospace;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--accent-2);
+}
+
+.session-option-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.session-option-meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
 .badge {
   display: inline-flex;
   align-items: center;

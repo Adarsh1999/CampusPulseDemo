@@ -30,12 +30,17 @@
           <p class="badge">Your feedback shows up live on the dashboard.</p>
 
           <form id="feedbackForm">
-            <div class="form-row" style="margin-top: 18px;">
-              <div>
-                <label for="sessionCode">Session code</label>
-                <input id="sessionCode" name="sessionCode" placeholder="MSA101" required />
+            <!-- Session Picker -->
+            <div style="margin-top: 18px;">
+              <label>Select a session</label>
+              <div class="session-picker" id="sessionPicker">
+                <div class="session-picker-loading">Loading sessions...</div>
               </div>
-              <div>
+              <input type="hidden" id="sessionCode" name="sessionCode" required />
+            </div>
+
+            <div class="form-row" style="margin-top: 18px;">
+              <div style="flex: 1;">
                 <label for="student">Your name (optional)</label>
                 <input id="student" name="student" placeholder="Aarav" />
               </div>

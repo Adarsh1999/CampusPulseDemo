@@ -17,8 +17,6 @@
 /home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/rjsmrazor.dswa.cache.json
 /home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json
 /home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/scopedcss/bundle/CampusPulse.App.styles.css
-/home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/compressed/ozhjki9h3n-{0}-se1hlukpcq-se1hlukpcq.gz
-/home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/compressed/d4q54bo1xw-{0}-czn64ucsrx-czn64ucsrx.gz
 /home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/staticwebassets.build.json
 /home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/staticwebassets.build.json.cache
 /home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/staticwebassets.development.json
@@ -29,11 +27,14 @@
 /home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/CampusPulse.App.pdb
 /home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/CampusPulse.App.genruntimeconfig.cache
 /home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/ref/CampusPulse.App.dll
-/home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/compressed/0s7hb5kbb6-{0}-68r5yyvgde-68r5yyvgde.gz
 /home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/compressed/djkgjgziay-{0}-4vzcjaz82f-4vzcjaz82f.gz
 /home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/compressed/ro1e40gyiw-{0}-q8kd3zbjm1-q8kd3zbjm1.gz
 /home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/compressed/jtepkeqc4z-{0}-iq2r1wi4vz-iq2r1wi4vz.gz
 /home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/compressed/a98y93g9ak-{0}-rylcdjzpq5-rylcdjzpq5.gz
-/home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/compressed/ixl7wrp4so-{0}-ypaa9667dr-ypaa9667dr.gz
-/home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/compressed/xbq0myzorh-{0}-cvidxu3lgv-cvidxu3lgv.gz
 /home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/bin/Debug/net10.0/App_Data/pulse.json
+/home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/CampusPulse.App.sourcelink.json
+/home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/compressed/0s7hb5kbb6-{0}-q31h60oo3x-q31h60oo3x.gz
+/home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/compressed/d4q54bo1xw-{0}-kaxgifej8w-kaxgifej8w.gz
+/home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/compressed/ozhjki9h3n-{0}-wbs8eayby5-wbs8eayby5.gz
+/home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/compressed/ixl7wrp4so-{0}-acjl6cvn2s-acjl6cvn2s.gz
+/home/adarsh/msa-project/CampusPulseDemo/CampusPulse.App/obj/Debug/net10.0/compressed/xbq0myzorh-{0}-rxhi9jn81l-rxhi9jn81l.gz
