@@ -1,0 +1,25 @@
+name: Visit tagged links
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+jobs:
+  visit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Visit randomized URLs
+        env:
+          RUN_PROBABILITY: "0.6"
+          JITTER_MAX_MINUTES: "10"
+          PER_VISIT_DELAY_MIN_MS: "1000"
+          PER_VISIT_DELAY_MAX_MS: "29000"
+        run: node scripts/visit-links.js
