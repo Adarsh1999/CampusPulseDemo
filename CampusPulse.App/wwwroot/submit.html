@@ -32,20 +32,20 @@
           <form id="feedbackForm">
             <!-- Session Picker -->
             <div style="margin-top: 18px;">
-              <label>Select a session</label>
+              <label>Select a session to rate</label>
               <div class="session-picker" id="sessionPicker">
-                <div class="session-picker-loading">Loading sessions...</div>
+                <div class="session-picker-loading">Loading available sessions...</div>
               </div>
-              <input type="hidden" id="sessionCode" name="sessionCode" required />
+              <input type="hidden" id="sessionCode" name="sessionCode" />
             </div>
 
-            <div class="form-row" style="margin-top: 18px;">
-              <div style="flex: 1;">
-                <label for="student">Your name (optional)</label>
-                <input id="student" name="student" placeholder="Aarav" />
-              </div>
+            <!-- Name (optional) -->
+            <div style="margin-top: 18px;">
+              <label for="student">Your name (optional)</label>
+              <input id="student" name="student" placeholder="Aarav" />
             </div>
 
+            <!-- Rating -->
             <div style="margin-top: 18px;">
               <label>Rating</label>
               <div class="rating-grid" id="ratingGrid">
@@ -57,11 +57,13 @@
               </div>
             </div>
 
+            <!-- Comment -->
             <div style="margin-top: 18px;">
               <label for="comment">What stood out?</label>
               <textarea id="comment" name="comment" placeholder="Great pace and clear explanations."></textarea>
             </div>
 
+            <!-- Submit -->
             <div style="margin-top: 20px;">
               <button class="btn btn-primary" type="submit">Send Feedback</button>
             </div>

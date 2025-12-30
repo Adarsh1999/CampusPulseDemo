@@ -9,27 +9,40 @@ const sessionPicker = document.getElementById("sessionPicker");
 let selectedRating = 0;
 let sessions = [];
 
+// Get prefilled code from URL
+const params = new URLSearchParams(window.location.search);
+const prefillCode = params.get("code")?.toUpperCase();
+
 // Load sessions on page load
 async function loadSessions() {
+  console.log("Loading sessions...");
   try {
     sessions = await getSessions();
+    console.log("Sessions loaded:", sessions);
     renderSessionPicker();
   } catch (error) {
-    sessionPicker.innerHTML = `<div class="session-picker-empty">Failed to load sessions. <a href="javascript:location.reload()">Retry</a></div>`;
+    console.error("Failed to load sessions:", error);
+    sessionPicker.innerHTML = `
+      <div class="session-picker-empty">
+        Failed to load sessions. <a href="javascript:location.reload()">Retry</a>
+      </div>
+    `;
   }
 }
 
 function renderSessionPicker() {
-  if (sessions.length === 0) {
-    sessionPicker.innerHTML = `<div class="session-picker-empty">No active sessions. <a href="/admin.html">Create one</a></div>`;
+  if (!sessions || sessions.length === 0) {
+    sessionPicker.innerHTML = `
+      <div class="session-picker-empty">
+        No active sessions available. <a href="/admin.html">Create one</a>
+      </div>
+    `;
     return;
   }
 
-  const params = new URLSearchParams(window.location.search);
-  const prefillCode = params.get("code")?.toUpperCase();
-
-  sessionPicker.innerHTML = sessions.map(session => {
-    const isSelected = prefillCode === session.code;
+  // Build session cards HTML
+  const cardsHtml = sessions.map(session => {
+    const isSelected = prefillCode && prefillCode === session.code.toUpperCase();
     if (isSelected) {
       sessionInput.value = session.code;
     }
@@ -45,18 +58,33 @@ function renderSessionPicker() {
     `;
   }).join('');
 
-  // Add click handlers
-  sessionPicker.querySelectorAll('.session-option').forEach(option => {
-    option.addEventListener('click', () => {
-      // Remove selected from all
-      sessionPicker.querySelectorAll('.session-option').forEach(o => o.classList.remove('selected'));
-      // Add selected to clicked
-      option.classList.add('selected');
-      // Update hidden input
-      sessionInput.value = option.dataset.code;
-      statusEl.textContent = '';
-    });
+  sessionPicker.innerHTML = cardsHtml;
+
+  // Add click handlers to each session card
+  const sessionOptions = sessionPicker.querySelectorAll('.session-option');
+  sessionOptions.forEach(option => {
+    option.addEventListener('click', () => selectSession(option));
   });
+
+  console.log("Rendered", sessionOptions.length, "session cards");
+}
+
+function selectSession(option) {
+  // Remove selected from all
+  sessionPicker.querySelectorAll('.session-option').forEach(o => {
+    o.classList.remove('selected');
+  });
+  
+  // Add selected to clicked
+  option.classList.add('selected');
+  
+  // Update hidden input
+  sessionInput.value = option.dataset.code;
+  
+  // Clear any error message
+  statusEl.textContent = '';
+  
+  console.log("Selected session:", option.dataset.code);
 }
 
 function escapeHtml(text) {
@@ -78,19 +106,21 @@ ratingButtons.forEach((button) => {
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
   statusEl.textContent = "";
+  statusEl.style.color = "";
 
-  const formData = new FormData(form);
-  const sessionCode = (formData.get("sessionCode") || "").toString().trim();
-  const comment = (formData.get("comment") || "").toString().trim();
-  const submittedBy = (formData.get("student") || "").toString().trim();
+  const sessionCode = sessionInput.value.trim();
+  const comment = document.getElementById("comment")?.value?.trim() || "";
+  const submittedBy = document.getElementById("student")?.value?.trim() || "";
 
   if (!sessionCode) {
-    statusEl.textContent = "Please select a session.";
+    statusEl.textContent = "⚠ Please select a session first.";
+    statusEl.style.color = "var(--accent)";
     return;
   }
 
   if (!selectedRating) {
-    statusEl.textContent = "Pick a rating from 1 to 5.";
+    statusEl.textContent = "⚠ Please pick a rating (1-5).";
+    statusEl.style.color = "var(--accent)";
     return;
   }
 
@@ -103,18 +133,19 @@ form.addEventListener("submit", async (event) => {
     });
 
     // Reset form but keep session selected
-    const currentCode = sessionInput.value;
-    form.reset();
-    sessionInput.value = currentCode;
+    document.getElementById("comment").value = "";
+    document.getElementById("student").value = "";
     ratingButtons.forEach((btn) => btn.classList.remove("active"));
     selectedRating = 0;
+    
     statusEl.textContent = "✓ Thanks! Your feedback was sent.";
     statusEl.style.color = "var(--accent-2)";
   } catch (error) {
-    statusEl.textContent = error.message;
+    console.error("Submit error:", error);
+    statusEl.textContent = "✗ " + error.message;
     statusEl.style.color = "var(--accent)";
   }
 });
 
-// Initialize
+// Initialize - load sessions when page loads
 loadSessions();

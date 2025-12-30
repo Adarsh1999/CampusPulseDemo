@@ -339,23 +339,33 @@ textarea {
 /* Session Picker */
 .session-picker {
   display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  margin-top: 10px;
 }
 
 .session-picker-loading {
+  grid-column: 1 / -1;
   color: var(--muted);
-  font-size: 0.9rem;
-  padding: 12px;
-}
-
-.session-picker-empty {
-  color: var(--muted);
-  font-size: 0.9rem;
-  padding: 12px;
+  font-size: 0.95rem;
+  padding: 16px;
   background: rgba(255, 255, 255, 0.04);
   border-radius: 12px;
   text-align: center;
+}
+
+.session-picker-empty {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 0.95rem;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.session-picker-empty a {
+  color: var(--accent-2);
 }
 
 .session-option {
