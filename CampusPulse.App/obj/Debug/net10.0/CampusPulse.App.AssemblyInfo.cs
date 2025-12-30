@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CampusPulse.App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3177218883f28429ca7350c593ba203b5fea0489")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1840c514e81980c49aeb5ce86d8f9edbb42ad600")]
 [assembly: System.Reflection.AssemblyProductAttribute("CampusPulse.App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CampusPulse.App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
